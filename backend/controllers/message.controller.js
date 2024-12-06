@@ -12,7 +12,7 @@ export const sendMessage = async (req, res) => {
         });
 
         if(!conversation){
-            let conversation = await Conversation.create({
+            conversation = await Conversation.create({
                 participants: [senderId, receiverId]
             });
         }
